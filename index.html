@@ -1,0 +1,36 @@
+
+
+<!doctype html>
+<html>
+  
+  <head>
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+      
+    <script src="fastclick.js"></script>
+    <script src="SCRIPTS/angular.js"></script>
+    <script src="SCRIPTS/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="example.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+
+  
+
+
+<body onload="onDeviceReady()">
+
+    <h1> Simple tabs with two controllers </h1>
+
+
+    <div ng-controller="tabsCtrl">
+
+        <tabset>
+            <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+                <div ng-include="tab.content"></div>
+            </tab>
+        </tabset>
+    </div>
+</body>
+
+</html>
